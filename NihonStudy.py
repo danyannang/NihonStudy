@@ -8,10 +8,23 @@ Daniel Yang
 #Needs UTF-8 Encoding to display Japanese characters 
 import sqlite3
 
+#Dictionary for books and their corresponding .db files
+db = { '1':'GenkiI.db' }
+
 #Initial Book Selection Menu 
 def MainMenu():
     print("Book Selection")
     print("1. げんき I")
+    sel = input()
+    return sel 
+    
+#Opens the .db file for the corresponding selection    
+def openBook(book):
+    conn = sqlite3.connect(db[int(book)])
+    
+#Closes the .db file
+def closeBook(conn):
+    conn.close() 
     
 #Creates the base empty vocab table for げんき I
 #Chapter(foreign key), Category(foreign key), Hiragana/Katakana, Kanji, Meaning 
@@ -37,15 +50,9 @@ def GenkiIVocabTable():
     conn.commit()
     conn.close()
     
-MainMenu()
 GenkiIVocabTable()
+bookSelection = MainMenu()
+conn = openBook(bookSelection)
+closeBook(conn)
 
-'''
-TO-DOs
-(げんき I)
-Add all of the vocab so far into the げんき I table
-Create the table for Category
 
-(Book Selection)
-
-'''
