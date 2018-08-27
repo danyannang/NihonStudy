@@ -1,0 +1,18 @@
+TO-DOs
+(げんき I)
+Add all of the vocab so far into the げんき I table
+Create the table for Category
+
+(Book Selection Menu)
+い/な - Adjectives Index
+う/る - Verbs Index 
+
+(Features)
+Browse data with arrow keys + 1-9 keys
+Flashcarding in order 
+
+(General)
+Create basic GUI for flashcarding 
+
+(Code)
+Separate into Main/Menu file and Book/Index files 
