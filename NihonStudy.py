@@ -63,6 +63,18 @@ def flashCard():
     kanji = cur.fetchall()     
     
     card = list(zip(meaning, hiragana, kanji))
+    
+    column = 0 #0 for meaning, 1 for hiragana, 2 for kanji
+    for term in range(len(card)):
+        for category in range(3): #3 columns in total to rotate through 
+            next = input()
+            if next == '':
+                print(*card[term][category], end = '') ##Fix so that it actually prints on same line (needed?)
+                column += 1
+                if column == 3:
+                    print()
+                    column = 0
+            
     print(card[0][0])
     for term in card:
         term = re.sub(r'[^\w\s]', '', str(term))
