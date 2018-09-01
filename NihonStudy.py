@@ -129,7 +129,8 @@ def genkiIVocabTable():
     #Insert values into the table 
     ##Turn this and previous execute into try so it won't stop when trying to write onto existing table?
     ##Should be a way to put long lists of values into other .py files 
-    # 1 - Greetings, 2 - School/Time, 3 - Countries, 4 - Majors, 5 - Occupations, 6 - Family    
+    #1 - Greetings, 2 - School/Time, 3 - Countries, 4 - Majors, 5 - Occupations, 6 - Family
+    #7 - Words That Point, 8 - Food, 9 - Nouns, 10 - Places, 11 - Money Matters, 12 - Adverbs / Expresssions
     cur.execute('''INSERT INTO VocabDB 
                    VALUES
                    (1, 'Good morning', 'おはよう', '', 0, 1),
@@ -205,7 +206,53 @@ def genkiIVocabTable():
                    (71, 'Older sister', 'おねえさん', '', 1, 6), 
                    (72, 'Older brother', 'おにいさん', '', 1, 6), 
                    (73, 'Younger sister', 'いもうと', '', 1, 6), 
-                   (74, 'Younger brother', 'おとうと', '', 1, 6)''')
+                   (74, 'Younger brother', 'おとうと', '', 1, 6),
+                   (75, 'This one', 'これ', '', 2, 7), 
+                   (76, 'That one', 'それ', '', 2, 7), 
+                   (77, 'That one (over there)', 'あれ', '', 2, 7), 
+                   (78, 'Which one', 'どれ', '', 2, 7), 
+                   (79, 'This...', 'この', '', 2, 7), 
+                   (80, 'That...', 'その', '', 2, 7), 
+                   (81, 'That... (over there)', 'あの', '', 2, 7), 
+                   (82, 'Which...', 'どの', '', 2, 7), 
+                   (83, 'Over there', 'あそこ', '', 2, 7), 
+                   (84, 'Where', 'どこ', '', 2, 7), 
+                   (85, 'Delicious', 'おいしい', '', 2, 8), 
+                   (86, 'Fish', 'さかな', '', 2, 8), 
+                   (87, 'Pork cutlet', 'とんかつ', '', 2, 8), 
+                   (88, 'Meat', 'にく', '', 2, 8), 
+                   (89, 'Menu', 'メニュー', '', 2, 8), 
+                   (90, 'Vegetable', 'やさい', '', 2, 8), 
+                   (91, 'Pencil', 'えんぴつ', '', 2, 9),
+                   (92, 'Umbrella', 'かさい', '', 2, 9), 
+                   (93, 'Bag', 'かばん', '', 2, 9), 
+                   (94, 'Shoes', 'くつ', '', 2, 9), 
+                   (95, 'Wallet', 'おふろ', '', 2, 9), 
+                   (96, 'Jeans', 'ジーンズ', '', 2, 9), 
+                   (97, 'Dictionary', 'じしょ', '', 2, 9), 
+                   (98, 'Bicycle', 'じてんしゃ', '', 2, 9), 
+                   (99, 'Newspaper', 'しんぶん', '', 2, 9), 
+                   (100, 'Tape', 'テープ', '', 2, 9), 
+                   (101, 'Watch; clock', 'とけい', '', 2, 9), 
+                   (102, 'Sweatshirt', 'トレーナー', '', 2, 9), 
+                   (103, 'Notebook', 'ノート', '', 2, 9), 
+                   (104, 'Pen', 'ペン', '', 2, 9), 
+                   (105, 'Hat; cap', 'ぼうし', '', 2, 9), 
+                   (106, 'Book', 'ほん', '', 2, 9), 
+                   (107, 'Restroom', 'おてあらい', '', 2, 10), 
+                   (108, 'Cafe', 'きさってん', '', 2, 10),
+                   (109, 'Bank', 'ぎんこう', '', 2, 10), 
+                   (110, 'Library', 'としょかん', '', 2, 10), 
+                   (111, 'Post office', 'ゆうびんきょく', '', 2, 10), 
+                   (112, 'How much', 'いくら', '', 2, 11), 
+                   (113, '...Yen', '~えん', '', 2, 11), 
+                   (114, 'Expensive', 'たかい', '', 2, 11), 
+                   (115, 'Welcome', 'いらっしゃいませ', '', 2, 12), 
+                   (116, '...Please', '(を)おねがいします', '', 2, 12), 
+                   (117, 'Please give me...', '(を)ください', '', 2, 12), 
+                   (118, 'Then...; If that is the case...', 'じゃあ', '', 2, 12), 
+                   (119, 'Here it is', '(を)どうぞ', '', 2, 12), 
+                   (120, 'Thank you', 'どうも', '', 2, 12)''')
      
     conn.commit()
     conn.close()
